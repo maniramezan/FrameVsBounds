@@ -39,9 +39,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var centerXLabel: UILabel!
     @IBOutlet weak var centerYLabel: UILabel!
     @IBOutlet weak var rotationLabel: UILabel!
-    
-    var lock = UnFairLockWrapper()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -97,12 +95,10 @@ class ViewController: UIViewController {
     }
     var lastRotationAngel = 0
     @IBAction func rotationSliderChanged(sender: AnyObject) {
-        lock.sync {
-            let currentDegree = Int(rotationSlider.value)
-            containerView.rotate(angel: currentDegree - lastRotationAngel)
-            lastRotationAngel = currentDegree
-            updateLabels()
-        }
+        let currentDegree = Int(rotationSlider.value)
+        containerView.rotate(angel: currentDegree - lastRotationAngel)
+        lastRotationAngel = currentDegree
+        updateLabels()
     }
     
     private func updateLabels() {
