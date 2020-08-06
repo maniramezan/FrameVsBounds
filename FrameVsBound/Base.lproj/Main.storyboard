@@ -67,7 +67,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kTZ-Xa-oqR">
                                         <rect key="frame" x="0.0" y="70" width="343" height="30"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="-400" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="KIl-aa-S4K">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="0.0" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="KIl-aa-S4K">
                                                 <rect key="frame" x="-2" y="0.0" width="195.5" height="31"/>
                                                 <connections>
                                                     <action selector="frameWidthSliderChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ygc-1E-9kh"/>
@@ -84,7 +84,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ywZ-Yg-BXs">
                                         <rect key="frame" x="0.0" y="105" width="343" height="30"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="-400" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="n5l-0f-RnN">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="0.0" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="n5l-0f-RnN">
                                                 <rect key="frame" x="-2" y="0.0" width="197" height="31"/>
                                                 <connections>
                                                     <action selector="frameHeightSliderChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="7ct-F8-Prk"/>
