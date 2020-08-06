@@ -249,7 +249,7 @@
                         <outlet property="frameXLabel" destination="kf4-FN-lUf" id="GzK-IB-jE0"/>
                         <outlet property="frameXSlider" destination="zHB-sT-Ee6" id="1NN-rf-8sk"/>
                         <outlet property="frameYLabel" destination="aPp-xC-tHL" id="WuE-pK-HUt"/>
-                        <outlet property="frameYSlier" destination="5wv-qn-D5J" id="8t2-th-Puz"/>
+                        <outlet property="frameYSlider" destination="5wv-qn-D5J" id="8t2-th-Puz"/>
                         <outlet property="imageView" destination="u1I-9A-cMX" id="zxT-0o-gwn"/>
                         <outlet property="rotationLabel" destination="nLI-lj-NOY" id="sAh-rg-nbK"/>
                         <outlet property="rotationSlider" destination="6iH-TJ-Rxe" id="00S-Qs-tJ6"/>

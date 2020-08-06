@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     // MARK: Sliders
     @IBOutlet weak var frameXSlider: UISlider!
-    @IBOutlet weak var frameYSlier: UISlider!
+    @IBOutlet weak var frameYSlider: UISlider!
     @IBOutlet weak var frameWidthSlider: UISlider!
     @IBOutlet weak var frameHeightSlider: UISlider!
     @IBOutlet weak var boundsXSlider: UISlider!
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         updateLabels()
     }
     @IBAction func frameYSliderChanged(sender: AnyObject) {
-        containerView.frame.origin.y = CGFloat(frameYSlier.value)
+        containerView.frame.origin.y = CGFloat(frameYSlider.value)
         updateLabels()
     }
     @IBAction func frameWidthSliderChanged(sender: AnyObject) {
