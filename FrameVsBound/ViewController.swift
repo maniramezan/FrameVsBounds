@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     // MARK: Sliders
     @IBOutlet weak var frameXSlider: UISlider!
-    @IBOutlet weak var frameYSlier: UISlider!
+    @IBOutlet weak var frameYSlider: UISlider!
     @IBOutlet weak var frameWidthSlider: UISlider!
     @IBOutlet weak var frameHeightSlider: UISlider!
     @IBOutlet weak var boundsXSlider: UISlider!
@@ -50,48 +50,59 @@ class ViewController: UIViewController {
         containerView.layer.borderWidth = 1
         
         updateLabels()
+        updateSliders()
     }
     
     // MARK: Sldier handlers
     @IBAction func frameXSliderChanged(sender: AnyObject) {
         containerView.frame.origin.x = CGFloat(frameXSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func frameYSliderChanged(sender: AnyObject) {
-        containerView.frame.origin.y = CGFloat(frameYSlier.value)
+        containerView.frame.origin.y = CGFloat(frameYSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func frameWidthSliderChanged(sender: AnyObject) {
         containerView.frame.size.width = CGFloat(frameWidthSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func frameHeightSliderChanged(sender: AnyObject) {
         containerView.frame.size.height = CGFloat(frameHeightSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func boundsXSliderChanged(sender: AnyObject) {
         containerView.bounds.origin.x = CGFloat(boundsXSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func boundsYSliderChanged(sender: AnyObject) {
         containerView.bounds.origin.y = CGFloat(boundsYSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func boundsWidthSliderChanged(sender: AnyObject) {
         containerView.bounds.size.width = CGFloat(boundsWidthSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func boundsHeightSliderChanged(sender: AnyObject) {
         containerView.bounds.size.height = CGFloat(boundsHeightSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func centerXSliderChanged(sender: AnyObject) {
         containerView.center.x = CGFloat(centerXSlider.value)
         updateLabels()
+        updateSliders()
     }
     @IBAction func centerYSliderChanged(sender: AnyObject) {
         containerView.center.y = CGFloat(centerYSlider.value)
         updateLabels()
+        updateSliders()
     }
     var lastRotationAngel = 0
     @IBAction func rotationSliderChanged(sender: AnyObject) {
@@ -99,6 +110,7 @@ class ViewController: UIViewController {
         containerView.rotate(angel: currentDegree - lastRotationAngel)
         lastRotationAngel = currentDegree
         updateLabels()
+        updateSliders()
     }
     
     private func updateLabels() {
@@ -114,6 +126,21 @@ class ViewController: UIViewController {
         centerXLabel.text = "center x = \(Int(containerView.center.x))"
         centerYLabel.text = "center y = \(Int(containerView.center.y))"
         rotationLabel.text = "rotation = \(Int(rotationSlider.value))"
+        
+    }
+    
+    private func updateSliders() {
+        
+        frameXSlider.value = Float(containerView.frame.origin.x)
+        frameYSlider.value = Float(containerView.frame.origin.y)
+        frameWidthSlider.value = Float(containerView.frame.size.width)
+        frameHeightSlider.value = Float(containerView.frame.size.height)
+        boundsXSlider.value = Float(containerView.bounds.origin.x)
+        boundsYSlider.value = Float(containerView.bounds.origin.y)
+        boundsWidthSlider.value = Float(containerView.bounds.size.width)
+        boundsHeightSlider.value = Float(containerView.bounds.size.height)
+        centerXSlider.value = Float(containerView.center.x)
+        centerYSlider.value = Float(containerView.center.y)
         
     }
 }
